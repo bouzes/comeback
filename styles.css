@@ -4,65 +4,60 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-.header-container{
-    background-color: #CBCBCB;
+header{
+    background-color: #f3f3f3;
+    padding: 10px 20px;
 }
 .header-nav{
     width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
     align-items: center;
+    gap: 20px;
 }
-.header-container .list-container {
-    list-style-type: none;
+.header-nav .list-container{
+    list-style: none;
     display: flex;
     gap: 20px;
-    align-items: center;
 }
-.header-container .list-container .list-item-link{
+.list-container .list-item .list-link{
     text-decoration: none;
-}
-a{
-    color: #7b7b7b;
- &:hover{
-    color: black;
-    transition: .3s;
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    -ms-transition: .3s;
-    -o-transition: .3s;
+    color: #363535;
+    &:hover{
+        color: black;
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
 }
 }
+    header span{
+        display: none;
+    }
 @media screen and (max-width:767px) {
-    nav{
-
+    .header-nav{
+        display: block;
+        width: 100%;
+    }
+    .header-nav .list-container{
         flex-direction: column;
-        align-items: flex-start !important;
+        margin-top: 10px;
+        height: 90vh;
     }
-    ul{
-        margin-top: 20px;
-        flex-direction: column;
-        align-items: flex-start !important;
+    .header-nav .list-container.hide{
+        display: none;
     }
-    ul.hide{
-        display: none !important;
+    .header-nav .list-container .list-item{
+        box-shadow: 0 1px 3px #3635352f;
+        padding: 10px;
     }
-    .ctl{
+    header span{
+        display: block;
+        cursor: pointer;
         position: absolute;
-    top: 10px;
-    cursor: pointer;
-    display: block !important;
-    border: none;
-    padding: 7px 20px;
-    border-radius: 10px;
-    right: 30px;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-
-}
-.ctl{
-    display: none;
+        right: 10px;
+        top: 15px;
+    }
 }
