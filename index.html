@@ -10,7 +10,7 @@
     <header class="header-container">
         <nav class="header-nav">
             <h2 class="logo">Logo</h2>
-            <ul class="list-container">
+            <ul class="hide list-container">
                 <li class="list-item"><a class="list-item-link" href="">Services</a></li>
                 <li class="list-item"><a class="list-item-link" href="">Home</a></li>
                 <li class="list-item"><a class="list-item-link" href="">Contact</a></li>
@@ -18,5 +18,17 @@
             </ul>
         </nav>
     </header>
+    <button class="ctl ">click</button>
+    <script>
+        let listContaainer = document.querySelector('.list-container')
+        let btnCTL=document.querySelector('.ctl')
+        btnCTL.addEventListener('click', ()=>{
+            listContaainer.classList.toggle('hide')
+        })
+        if(window.innerWidth>765){
+            listContaainer.classList.remove('hide')
+        }
+       
+    </script>
 </body>
 </html>
