@@ -37,14 +37,20 @@ header{
         display: none;
     }
 @media screen and (max-width:767px) {
+    header{
+         position: absolute;
+        height: auto;
+        width: 100%;
+        background-color: white;
+    }
     .header-nav{
         display: block;
         width: 100%;
+       
     }
     .header-nav .list-container{
         flex-direction: column;
         margin-top: 10px;
-        height: 90vh;
     }
     .header-nav .list-container.hide{
         display: none;
@@ -60,4 +66,40 @@ header{
         right: 10px;
         top: 15px;
     }
+    aside ,main{
+        grid-column: span 1 !important;
+    }
+}
+.container{
+    background-color: whitesmoke;
+    display: grid;
+    height: 100vh;
+    text-align: center;
+    
+    
+}
+.container h2{
+    font-size: 30px;
+}
+.container main{
+ background-color: red;
+ width: 100%;
+ grid-column: span 3;
+}
+.container aside{
+    grid-column: 4;
+    background-color: #110b61;
+    color: aliceblue;
+}
+aside ,main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+footer{
+    text-align: center;
+    background-color: #363535;
+    color: antiquewhite;
+    padding: 20px;
 }
